@@ -10,5 +10,5 @@ testy = [
     "The movie was bad bad bad bad bad bad",
     "The movie was okay okay okay okay okay okay okay okay.",
     "Great Great Great Great Great Great Great",
-    "The movie was good with good acting but a good screenplay."
+    "The movie was good with good acting but a poor screenplay."
 ]
