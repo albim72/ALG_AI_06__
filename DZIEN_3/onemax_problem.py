@@ -22,3 +22,13 @@ toolbox.register("population",tools.initRepeat,list,toolbox.individual)
 #funkcja przystosowania
 def evalOneMax(individual):
     return sum(individual)
+
+#Ewaluacja
+toolbox.register("evaluate",evalOneMax)
+
+#opertor mutacji
+toolbox.register("mutate",tools.mutFlipBit,indpb=0.05)
+
+#operator selekcji
+toolbox.register("select",tools.selTournament,tournsize=3)
+
