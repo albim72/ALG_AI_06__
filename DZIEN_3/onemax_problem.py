@@ -32,3 +32,24 @@ toolbox.register("mutate",tools.mutFlipBit,indpb=0.05)
 #operator selekcji
 toolbox.register("select",tools.selTournament,tournsize=3)
 
+def main():
+    random.seed(64)
+    #utworzenie populacji
+    pop = toolbox.population(n=300)
+    
+    #CXPB - prawdopodobieństwo z który dwa osobniki zostaną reprodukowane
+    #MUTPB - prawdopodobieństwo mutacji osobnika
+    
+    CXPB, MUTPB = 0.5,0.2
+    
+    print("Zaczynamy ewolucję....")
+    
+    #ewaluacja populacji wejściowej
+    fitness = list(map(toolbox.evaluate,pop))
+    for ind,fit in zip(pop,fitness):
+        ind.fitness.values = fit
+        
+    print(f" Ewaluacji poddano {len(pop)} osobników")
+    
+    
+
